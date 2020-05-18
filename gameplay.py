@@ -58,10 +58,10 @@ def checkrow2_w():
                 board[x+1][t]=0
         t=t+1
 def checkrow_w(s):
-    checkrow1_w()
     for q in range(s):
-
         checkrow2_w()
+    checkrow1_w()
+    checkrow2_w()
 def checkrow1_s():
     y=0
     while(y<s):
@@ -80,10 +80,10 @@ def checkrow2_s():
                 board[x][t]=0
         t=t+1
 def checkrow_s(s):
-    checkrow1_s()
     for q in range(s):
-
         checkrow2_s()
+    checkrow1_s()
+    checkrow2_s()
 def checkcolumn1_d():
     x=0
     while(x<s):
@@ -102,10 +102,10 @@ def checkcolumn2_d():
                 board[x][y]=0
         x=x+1
 def checkcolumn_d(s):
-    checkcolumn1_d()
     for q in range(s):
-
         checkcolumn2_d()
+    checkcolumn1_d()
+    checkcolumn2_d()
 def checkcolumn1_a():
     x=0
     while(x<s):
@@ -124,10 +124,10 @@ def checkcolumn2_a():
                 board[x][y+1]=0
         x=x+1
 def checkcolumn_a(s):
-    checkcolumn1_a()
     for q in range(s):
-
         checkcolumn2_a()
+    checkcolumn1_a()
+    checkcolumn2_a()
 def checkwin(w):
     key=0
     for row in board:

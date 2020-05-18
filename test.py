@@ -1,33 +1,27 @@
 board=[[4,2,4,2],[4,4,8,2],[8,8,8,0],[8,4,4,8]]
-fork=board
-s=4
-def checkrow1_w():
-    y=0
-    while(y<s):
-        for x in range(s-1):
+# import only system from os
+from os import system, name
 
-            if(board[x][y]==board[x+1][y]):
-                board[x][y]=board[x][y]*2
-                board[x+1][y]=0
-        y=y+1
-def checkrow2_w():
-    t=0
-    while t<s:
-        for x in range(s-1):
-            if(board[x][t]==0 and board[x+1][t]!=0 or board[x][t]==0):
-                board[x][t]=board[x+1][t]
-                board[x+1][t]=0
-        t=t+1
-def checkrow_w(s):
-    checkrow1_w()
-    for q in range(s):
+# import sleep to show output for some time period
+from time import sleep
 
-        checkrow2_w()
-checkrow_w(4)
-damn=0
-for x in range(4):
-    for y in range(4):
-        if fork[x][y]==board[x][y]:
-            damn=damn+1
-if damn!=16:
-    print("yeah")
+# define our clear function
+def clear():
+
+    # for windows
+    if name == 'nt':
+        _ = system('cls')
+
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
+
+# print out some text
+for row in board:
+    print(row)
+
+# sleep for 2 seconds after printing output
+sleep(2)
+
+# now call function we defined above
+clear()
