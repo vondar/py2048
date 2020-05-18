@@ -20,5 +20,6 @@ Now, since you have read till here go and play.
 
 ### SIDE NOTE
 
+- I have made on windows,but I use commander as command prompt so probably will work everywhere
 - This is all made frm basics, I knew of.
 - Random library and the copy modules were google searches
