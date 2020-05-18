@@ -1,4 +1,5 @@
 board=[[4,0,0,0],[4,0,8,0],[0,8,8,0],[8,0,4,8]]
+s=4
 for row in board:
     print(row)
 def checkrow1():

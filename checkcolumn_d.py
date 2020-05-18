@@ -1,4 +1,5 @@
 board=[[4,0,0,0],[4,0,8,0],[0,8,8,0],[8,0,4,8]]
+s=4
 for row in board:
     print(row)
 
@@ -19,11 +20,11 @@ def checkcolumn2():
                 board[x][y+1]=board[x][y]
                 board[x][y]=0
         x=x+1
-def checkcolumn_a(s):
+def checkcolumn_d(s):
     checkcolumn1()
     for q in range(s):
 
         checkcolumn2()
-checkcolumn_a(4)
+checkcolumn_d(4)
 for row in board:
     print(row)

@@ -1,4 +1,5 @@
 board=[[4,0,0,0],[4,0,8,0],[0,8,8,0],[8,0,4,8]]
+s=4
 for row in board:
     print(row)
 def checkrow1():
@@ -18,12 +19,12 @@ def checkrow2():
                 board[x+1][t]=board[x][t]
                 board[x][t]=0
         t=t+1
-def checkrow_w(s):
+def checkrow_s(s):
     checkrow1()
     for q in range(s):
 
         checkrow2()
 
-checkrow_w(4)
+checkrow_s(4)
 for row in board:
     print(row)
