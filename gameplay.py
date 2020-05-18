@@ -219,7 +219,7 @@ if wi==0:
                 win=checkwin(w)
                 for row in board:
                     print(row)
-                if w==1:
+                if win==1:
                     break
         elif key=='a':
             clear()
