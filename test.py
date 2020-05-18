@@ -25,6 +25,5 @@ sleep(2)
 
 # now call function we defined above
 clear()
-music=pyglet.resource.media('music.mp3')
-music.play()
-pyglet.app.run()
+source = load('music.mp3')
+player.queue(source)
