@@ -1,6 +1,6 @@
-#INSTRUCTIONS
-##2048
-###-Himanshu G. Mahajan
+# INSTRUCTIONS
+## 2048
+### -Himanshu G. Mahajan
 
 The file you want to run is gameplay.py.The others are functions various other aspects required to make it.
 
