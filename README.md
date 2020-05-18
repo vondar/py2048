@@ -20,6 +20,5 @@ Now, since you have read till here go and play.
 
 ### SIDE NOTE
 
-- Pretty generic game
 - This is all made frm basics, I knew of.
 - Random library and the copy modules were google searches
