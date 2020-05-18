@@ -4,7 +4,7 @@
 
 The file you want to run is gameplay.py.The others are functions various other aspects required to make it.
 
-Game in a nutshell:
+## Game in a nutshell:
 1. It will ask you the size of the map.You will input the size.
 2. It will ask you the winning number.you will input a power of 2 or consequences must be faced by you.
 3. Then the map will appear ,the game will begin.
@@ -17,3 +17,9 @@ Game in a nutshell:
 6. If the number is not reached,my game has defeated you.(note:I pity you, you had everything to choose)   
 
 Now, since you have read till here go and play.
+
+### SIDE NOTE
+
+- Pretty generic game
+- This is all made frm basics, I knew of.
+- Random library and the copy modules were google searches

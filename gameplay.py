@@ -1,3 +1,13 @@
+from os import system, name
+def clear():
+
+    # for windows
+    if name == 'nt':
+        _ = system('cls')
+
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
 import copy
 print('let us begin!')
 
@@ -176,6 +186,7 @@ if wi==0:
     while('true'):
         key=input()
         if key=='w':
+            clear()
             fork=copy.deepcopy(board)
             checkrow_w(s)
             damn=0
@@ -193,6 +204,7 @@ if wi==0:
                 if win==1:
                     break
         elif key=='s':
+            clear()
             fork=copy.deepcopy(board)
             checkrow_s(s)
             damn=0
@@ -210,6 +222,7 @@ if wi==0:
                 if w==1:
                     break
         elif key=='a':
+            clear()
             fork=copy.deepcopy(board)
             checkcolumn_a(s)
             damn=0
@@ -227,6 +240,7 @@ if wi==0:
                 if win==1:
                     break
         elif key=='d':
+            clear()
             fork=copy.deepcopy(board)
             checkcolumn_d(s)
             damn=0
