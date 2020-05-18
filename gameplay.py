@@ -27,7 +27,7 @@ while 'true':
         break
 import random
 x=random.randint(0,s-1)
-y=random.randint(1,s-1)
+y=random.randint(0,s-1)
 
 board=[[0 for a in range(s)]
 
@@ -171,79 +171,78 @@ def addrandom2():
 
 
     board[int(rand_coor[0])][int(rand_coor[1])]=2
-while('true'):
-    key=input()
-    if key=='w':
-        fork=copy.deepcopy(board)
-        checkrow_w(s)
-        damn=0
-        for x in range(s):
-            for y in range(s):
-                if fork[x][y]==board[x][y]:
-                    damn=damn+1
-        if damn==s*s:
-            print("wrong boss")
+wi=checkwin(w)
+if wi==0:
+    while('true'):
+        key=input()
+        if key=='w':
+            fork=copy.deepcopy(board)
+            checkrow_w(s)
+            damn=0
+            for x in range(s):
+                for y in range(s):
+                    if fork[x][y]==board[x][y]:
+                        damn=damn+1
+            if damn==s*s:
+                print("wrong boss")
+            else:
+                addrandom2()
+                win=checkwin(w)
+                for row in board:
+                    print(row)
+                if win==1:
+                    break
+        elif key=='s':
+            fork=copy.deepcopy(board)
+            checkrow_s(s)
+            damn=0
+            for x in range(s):
+                for y in range(s):
+                    if fork[x][y]==board[x][y]:
+                        damn=damn+1
+            if damn==s*s:
+                print("wrong boss")
+            else:
+                addrandom2()
+                win=checkwin(w)
+                for row in board:
+                    print(row)
+                if w==1:
+                    break
+        elif key=='a':
+            fork=copy.deepcopy(board)
+            checkcolumn_a(s)
+            damn=0
+            for x in range(s):
+                for y in range(s):
+                    if fork[x][y]==board[x][y]:
+                        damn=damn+1
+            if damn==s*s:
+                print("wrong boss")
+            else:
+                addrandom2()
+                win=checkwin(w)
+                for row in board:
+                    print(row)
+                if win==1:
+                    break
+        elif key=='d':
+            fork=copy.deepcopy(board)
+            checkcolumn_d(s)
+            damn=0
+            for x in range(s):
+                for y in range(s):
+                    if fork[x][y]==board[x][y]:
+                        damn=damn+1
+            if damn==s*s:
+                print("wrong boss")
+            else:
+                addrandom2()
 
-            for row in fork:
-                print(row)
+                win=checkwin(w)
+                for row in board:
+                    print(row)
+                if win==1:
+                    break
         else:
-            addrandom2()
-            win=checkwin(w)
-            for row in board:
-                print(row)
-            if win==1:
-                break
-    elif key=='s':
-        fork=copy.deepcopy(board)
-        checkrow_s(s)
-        damn=0
-        for x in range(s):
-            for y in range(s):
-                if fork[x][y]==board[x][y]:
-                    damn=damn+1
-        if damn==s*s:
-            print("wrong boss")
-        else:
-            addrandom2()
-            win=checkwin(w)
-            for row in board:
-                print(row)
-            if w==1:
-                break
-    elif key=='a':
-        fork=copy.deepcopy(board)
-        checkcolumn_a(s)
-        damn=0
-        for x in range(s):
-            for y in range(s):
-                if fork[x][y]==board[x][y]:
-                    damn=damn+1
-        if damn==s*s:
-            print("wrong boss")
-        else:
-            addrandom2()
-            win=checkwin(w)
-            for row in board:
-                print(row)
-            if win==1:
-                break
-    elif key=='d':
-        fork=copy.deepcopy(board)
-        checkcolumn_d(s)
-        damn=0
-        for x in range(s):
-            for y in range(s):
-                if fork[x][y]==board[x][y]:
-                    damn=damn+1
-        if damn==s*s:
-            print("wrong boss")
-        else:
-            addrandom2()
-
-            win=checkwin(w)
-            for row in board:
-                print(row)
-            if win==1:
-                break
-    else:
-        print('invalid input')
+            print('invalid input')
